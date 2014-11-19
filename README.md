@@ -12,7 +12,7 @@ HearthQuiz is a nodeJS Web Application running on the Sails MVC Framework.  It p
  - curl
 
 # Filling Database
- - curl -X POST -H "Content-Type: application/json" -d @AllSets.json http://localhost:1337/insertCard
+ - curl -X POST -H "Content-Type: application/json" -d @AllSets.json http://localhost:1337/insertCards
 
 # Credits
  - http://hearthstonejson.com/ - Providing Data
