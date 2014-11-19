@@ -8,6 +8,10 @@
 module.exports = {
 
   attributes: {
+      hearthID: {
+        type: 'string'
+      },
+      
       name: {
         type: 'string'
       },
@@ -17,7 +21,7 @@ module.exports = {
       },
 
       faction: {
-        type: 'neutral'
+        type: 'string'
       },
 
       rarity: {
