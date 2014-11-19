@@ -8,7 +8,53 @@
 module.exports = {
 
   attributes: {
+      name: {
+        type: 'string'
+      },
 
+      type: {
+        type: 'string'
+      },
+
+      faction: {
+        type: 'neutral'
+      },
+
+      rarity: {
+        type: 'string'
+      },
+
+      cost: {
+        type: 'integer'
+      },
+
+      attack: {
+        type: 'integer'
+      },
+
+      health: {
+        type: 'integer'
+      },
+
+      text: {
+        type: 'string'
+      },
+
+      race: {
+        type: 'string'
+      },
+
+      playerClass: {
+        type: 'string'
+      },
+
+      mechanics: {
+        //Should Probably Be Array
+        type: 'string'
+      },
+
+      imageLink: {
+        type: 'string'
+      }
   }
 };
-
