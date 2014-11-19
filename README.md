@@ -5,4 +5,7 @@ HearthQuiz is a nodeJS Web Application running on the Sails MVC Framework.  It p
 #Dependencies
  - nodeJS
  - Sails
+  - sails-generate-bower
+  - sails-postgresql
  - PostgreSQL
+ - Bower
