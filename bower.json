@@ -1,0 +1,14 @@
+{
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "name": "HearthQuiz.com",
+  "version": "0.0.0",
+  "author": "hunter",
+  "private": true
+}
