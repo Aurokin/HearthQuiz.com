@@ -10,6 +10,8 @@ module.exports = {
 
 		//console.log(req.body);
 		console.log(req.body.Basic);
+		console.log('');
+		console.log(req.body.Basic[1]);
 
 		return res.send('Recieved Data');
 	}
