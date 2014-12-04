@@ -53,7 +53,6 @@ module.exports = {
       },
 
       mechanics: {
-        //Should Probably Be Array
         type: 'array'
       },
 

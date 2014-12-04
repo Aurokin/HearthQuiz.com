@@ -7,7 +7,7 @@
 
 module.exports = {
 	InsertCards: function (req, res) {
-		
+
 		Object.keys(req.body).forEach(function(set) {
 
 			req.body[set].forEach(function(card) {
@@ -16,12 +16,15 @@ module.exports = {
 				delete card.id;
 				card.imageLink = 'http://wow.zamimg.com/images/hearthstone/cards/enus/original/'+card.hearthID+'.png';
 
-				console.log(card);
+				if (typeof card.playerClass === 'undefined') {
+					card.playerClass = 'Neutral';
+				}
 
 				if (card.collectible = 'true' && typeof card.collectible !== 'undefined' && card.type != 'Hero') {
 					Cards.create(card).exec(function createCB(err, created) {
-						console.log(err);
-						console.log(created);
+						if (err) {
+							res.send('Card Could Not Be Added To Database');
+						}
 					});
 				}
 			});
