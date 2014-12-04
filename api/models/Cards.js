@@ -9,7 +9,8 @@ module.exports = {
 
   attributes: {
       hearthID: {
-        type: 'string'
+        type: 'string',
+        unique: true
       },
 
       name: {
