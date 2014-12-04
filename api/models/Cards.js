@@ -11,7 +11,7 @@ module.exports = {
       hearthID: {
         type: 'string'
       },
-      
+
       name: {
         type: 'string'
       },
@@ -54,10 +54,14 @@ module.exports = {
 
       mechanics: {
         //Should Probably Be Array
-        type: 'string'
+        type: 'array'
       },
 
       imageLink: {
+        type: 'string'
+      },
+
+      set: {
         type: 'string'
       }
   }
