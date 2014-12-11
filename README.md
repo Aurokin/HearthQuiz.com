@@ -19,8 +19,10 @@ HearthQuiz is a nodeJS Web Application running on the Sails MVC Framework.  It p
 
 # Installation
  - Install curl
-    sudo apt-get update
-    sudo apt-get install curl
+```
+  - sudo apt-get update
+  - sudo apt-get install curl
+```
  - Install PostgreSQL
   - sudo apt-get update
   - sudo apt-get install postgresql postgresql-contrib
