@@ -35,7 +35,8 @@ module.exports.routes = {
   '/': {
     view: 'index'
   },
-  'post /insertCards': 'CardsController.InsertCards'
+  'post /insertCards': 'CardsController.InsertCards',
+  'post /customQuiz': 'CardsController.CustomQuiz'
 
   /***************************************************************************
   *                                                                          *

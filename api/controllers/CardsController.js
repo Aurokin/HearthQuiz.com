@@ -31,5 +31,31 @@ module.exports = {
 		});
 
 		return res.send('Recieved Data');
+	},
+
+	CustomQuiz: function (req, res) {
+		var qClass = req.body.qClass;
+		var qType = req.body.qType;
+		var qSet = req.body.qSet;
+
+		if (qClass === 'All') {
+			qClass = '';
+		}
+
+		if (qType === 'All') {
+			qType = '';
+		}
+
+		if (qSet === 'All') {
+			qSet = '';
+		}
+
+		Cards.find().where({
+			playerClass : {'startsWith' : qClass},
+			type : {'startsWith' : qType},
+			set : {'startsWith' : qSet}	
+		}).exec(function(err, cards) {
+				res.send(cards);
+		});
 	}
 };

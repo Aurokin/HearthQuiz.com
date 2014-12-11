@@ -2,6 +2,14 @@
 
 @backgroundColor: #246068;
 @well: #9d9d9d;
+@animateTime: 0.3s;
+
+//Font
+/*
+@font-face {
+  font-family: Hearthstone,
+  src: url('/fonts/hearthstoneFont.ttf');
+} */
 
 //CSS
 
@@ -18,3 +26,76 @@ body {
   background-color: @well;
   border: 1px solid @well;
 }
+
+.quizLabel {
+  padding-top: 5px;
+}
+
+.textHeader {
+  margin-bottom: 30px;
+}
+
+#startQuizBtn {
+  margin-left: 10px
+}
+
+#mainWell {
+  min-height: 530px;
+}
+
+#cardCount {
+  float: right;
+}
+
+#mainImage {
+  display: block;
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 412px;
+  background-position: -12px -32px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-animation-duration: @animateTime;
+  -moz-animation-duration: @animateTime;
+  animation-duration: @animateTime;
+}
+
+#mainCardName {
+  margin: 0px;
+  -webkit-animation-duration: @animateTime;
+  -moz-animation-duration: @animateTime;
+  animation-duration: @animateTime;
+}
+
+#cardsCount {
+  -webkit-animation-duration: @animateTime;
+  -moz-animation-duration: @animateTime;
+  animation-duration: @animateTime;
+}
+
+#cardCount {
+  -webkit-animation-duration: @animateTime;
+  -moz-animation-duration: @animateTime;
+  animation-duration: @animateTime;
+}
+
+.initialAnimation {
+  -webkit-animation-delay: 0.25s;
+  -moz-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.firstAnimation {
+  -webkit-animation-delay: .1s !important;
+  -moz-animation-delay: .1s !important;
+  animation-delay: .1s !important;
+}
+
+
+/*
+h1 {
+  font-family: 'Hearthstone', serif;
+} */

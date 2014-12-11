@@ -1,33 +1,60 @@
 <div id="site">
-  <div class="well well-lg clearfix">
-    <h1 class="text-center">Setup Custom HearthQuiz</h1>
-    <select class="form-control" id="classSelect">
-      <option>All</option>
-      <option>Neutral</option>
-      <option>Druid</option>
-      <option>Hunter</option>
-      <option>Mage</option>
-      <option>Paladin</option>
-      <option>Priest</option>
-      <option>Rogue</option>
-      <option>Shaman</option>
-      <option>Warlock</option>
-    </select>
-    <select class="form-control" id="typeSelect">
-      <option>All</option>
-      <option>Minion</option>
-      <option>Spell</option>
-    </select>
-    <select class="form-control" id="setSelect">
-      <option>All</option>
-      <option>Basic</option>
-      <option>Expert</option>
-      <option>Naxxaramas</option>
-    </select>
-    <select class="form-control" id="quizSelect">
-      <option>Flash Card</option>
-      <option>Knowledge Entry</option>
-    </select>
+  <div class="well well-lg clearfix" id="mainWell">
+    <div id="quizSetup" class="animated fadeIn initialAnimation">
+      <div class="textHeader">
+        <h1 class="text-center">Setup Custom HearthQuiz</h1>
+      </div>
+      <div class="col-sm-6 col-sm-offset-3">
+        <div class="form-group col-sm-12">
+          <label for="classSelect" class="col-sm-2 control-label quizLabel">Class</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="classSelect">
+              <option>All</option>
+              <option>Neutral</option>
+              <option>Druid</option>
+              <option>Hunter</option>
+              <option>Mage</option>
+              <option>Paladin</option>
+              <option>Priest</option>
+              <option>Rogue</option>
+              <option>Shaman</option>
+              <option>Warlock</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group col-sm-12">
+          <label for="typeSelect" class="col-sm-2 control-label quizLabel">Type</label>
+          <div class="col-sm-10">
+            <select class="form-control" id="typeSelect">
+              <option>All</option>
+              <option>Minion</option>
+              <option>Spell</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group col-sm-12">
+          <label for="setSelect" class="col-sm-2 control-label quizLabel">Set</label>
+            <div class="col-sm-10">
+              <select class="form-control" id="setSelect">
+                <option>All</option>
+                <option>Basic</option>
+                <option>Expert</option>
+                <option>Goblins vs Gnomes</option>
+                <option value="Curse of Naxxramas">Naxxaramas</option>
+              </select>
+            </div>
+        </div>
+        <div class="col-sm-5 col-sm-offset-2">
+          <button type="button" class="btn btn-primary" id="startQuizBtn">Begin</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="cardQuiz" class="hidden">
+      <h1 class="text-center animated" id="mainCardName"></h1>
+      <div id="mainImage" class="animated"></div>
+      <div id="cardCount" class="animated firstAnimation"><span id="cardsCount">0</span><span> / <span><span id="cardsTotal"></span></div>
+    </div>
   </div>
 </div>
 
