@@ -24,40 +24,61 @@ sudo apt-get update
 sudo apt-get install curl
 ```
  - Install PostgreSQL
-  - sudo apt-get update
-  - sudo apt-get install postgresql postgresql-contrib
+```
+sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+```
  - Setup PostgreSQL
-  - sudo -i -u postgres
-  - psql
-  - CREATE USER hearthquiz password 'cards';
-  - CREATE DATABASE hearthquiz owner hearthquiz;
-  - \q
-  - exit
+```
+sudo -i -u postgres
+psql
+CREATE USER hearthquiz password 'cards';
+CREATE DATABASE hearthquiz owner hearthquiz;
+\q
+exit
+```
  - Install NodeJS
-  - sudo apt-get update
-  - sudo apt-get install python-software-properties python g++ make
-  - sudo apt-get update
-  - sudo apt-get install nodejs
+```
+sudo apt-get update
+sudo apt-get install python-software-properties python g++ make
+sudo apt-get update
+sudo apt-get install nodejs
+```
  - Install Sails.js
-  - sudo npm -g install sails
+```
+sudo npm -g install sails
+```
  - Install Bower
-  - sudo npm install -g bower
-  - bower install
+```
+sudo npm install -g bower
+bower install
+```
  - Git Clone
  - Navigate To Directory
-  - cd HearthQuiz.com
+```
+cd HearthQuiz.com
+```
  - Install Sails-Postgresql
-  - sudo npm install sails-postgresql
+```
+sudo npm install sails-postgresql
+```
  - Install Sails-Generate-Bower
-  - sudo npm install sails-generate-bower
- - sudo npm install
- - sails lift
+```
+sudo npm install sails-generate-bower
+```
+ - Finish Instalation / Start Application
+```
+sudo npm install
+sails lift
+```
 
 
 # Filling Database
  - Ensure Sails is lifted (Either open another tab, or use forever)
- - Navigate to /assets/json
- - curl -X POST -H "Content-Type: application/json" -d @AllSets.json http://localhost:1337/insertCards
+```
+cd /assets/json
+curl -X POST -H "Content-Type: application/json" -d @AllSets.json http://localhost:1337/insertCards
+```
 
 # Credits
  - http://hearthstonejson.com/ - Providing Data
