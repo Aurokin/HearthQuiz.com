@@ -17,6 +17,41 @@ HearthQuiz is a nodeJS Web Application running on the Sails MVC Framework.  It p
  - jQuery
  - Underscore.js
 
+# Installation
+ - Install curl
+    sudo apt-get update
+    sudo apt-get install curl
+ - Install PostgreSQL
+  - sudo apt-get update
+  - sudo apt-get install postgresql postgresql-contrib
+ - Setup PostgreSQL
+  - sudo -i -u postgres
+  - psql
+  - CREATE USER hearthquiz password 'cards';
+  - CREATE DATABASE hearthquiz owner hearthquiz;
+  - \q
+  - exit
+ - Install NodeJS
+  - sudo apt-get update
+  - sudo apt-get install python-software-properties python g++ make
+  - sudo apt-get update
+  - sudo apt-get install nodejs
+ - Install Sails.js
+  - sudo npm -g install sails
+ - Install Bower
+  - sudo npm install -g bower
+  - bower install
+ - Git Clone
+ - Navigate To Directory
+  - cd HearthQuiz.com
+ - Install Sails-Postgresql
+  - sudo npm install sails-postgresql
+ - Install Sails-Generate-Bower
+  - sudo npm install sails-generate-bower
+ - sudo npm install
+ - sails lift
+
+
 # Filling Database
  - Ensure Sails is lifted (Either open another tab, or use forever)
  - Navigate to /assets/json
