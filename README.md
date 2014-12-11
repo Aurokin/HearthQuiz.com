@@ -11,7 +11,15 @@ HearthQuiz is a nodeJS Web Application running on the Sails MVC Framework.  It p
  - Bower
  - curl
 
+# Libraries
+ - Animate.css
+ - Bootstrap
+ - jQuery
+ - Underscore.js
+
 # Filling Database
+ - Ensure Sails is lifted (Either open another tab, or use forever)
+ - Navigate to /assets/json
  - curl -X POST -H "Content-Type: application/json" -d @AllSets.json http://localhost:1337/insertCards
 
 # Credits
