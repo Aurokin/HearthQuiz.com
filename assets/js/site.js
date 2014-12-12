@@ -77,8 +77,8 @@ function initialDataLoad() {
   //Load Card Total
   cardsTotal.text(quizDeck.length);
   //One Time Animate Footer Text
-  $('#cardCount').addClass('fadeIn');
-  $('#instructionText').addClass('fadeIn');
+  $('#cardCount').removeClass('fadeOut').addClass('fadeIn');
+  $('#instructionText').removeClass('fadeOut').addClass('fadeIn');
   //Load Card Back
   loadCardBack();
   //Stop Spinner
@@ -139,12 +139,19 @@ function loadCardBack() {
     mainImage.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', setAnimateToFalse);
   }
   else {
-    cardsCount.text(0);
-    $('#cardQuiz').addClass('hidden');
-    quizSetup.removeClass('fadeOut').addClass('fadeIn').show();
+    var cardCount = $('#cardCount');
+    $('#instructionText').removeClass('fadeIn').addClass('fadeOut');
+    cardCount.removeClass('fadeIn').addClass('fadeOut');
+    cardCount.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', showRegularQuiz);
   }
 }
 
 function setAnimateToFalse() {
   animating = false;
+}
+
+function showRegularQuiz() {
+  cardsCount.text(0);
+  $('#cardQuiz').addClass('hidden');
+  quizSetup.removeClass('fadeOut').addClass('fadeIn').show();
 }
