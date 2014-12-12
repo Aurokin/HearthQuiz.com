@@ -1,7 +1,7 @@
 $(document).ready(function() {
   preloadImage('/images/cardBack.png');
   animating = false;
-  spinnerOpts = {top: '60%'};
+  spinnerOpts = {top: '50%'};
 });
 
 $('#startQuizBtn').click(function() {
