@@ -40,7 +40,7 @@ body {
 }
 
 #mainWell {
-  min-height: 540px;
+  min-height: 560px;
 }
 
 #instructionText {
@@ -90,6 +90,53 @@ body {
   -webkit-animation-delay: .1s !important;
   -moz-animation-delay: .1s !important;
   animation-delay: .1s !important;
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 26px;
+  }
+  #startQuizBtn {
+    margin-left: 15px;
+  }
+  #mainWell {
+    padding-bottom: 12px;
+  }
+  #bottomFooter {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .form-group {
+    margin-bottom: 5px;
+  }
+  .textHeader {
+    margin-bottom: 10px;
+  }
+  #mainWell {
+    padding-left: 0px;
+    padding-right: 0px;
+    min-height: 400px;
+  }
+  #instructionText {
+    padding-left: 10px;
+  }
+  #cardCount {
+    padding-right: 10px;
+  }
+  #bottomFooter {
+    margin-top: 29px;
+  }
+  #mainImage {
+    width: 210px;
+    height: 285px;
+    background-size: cover;
+    background-position: 0px -22px;
+  }
+  #startQuizBtn {
+    margin-top: 5px;
+  }
 }
 
 

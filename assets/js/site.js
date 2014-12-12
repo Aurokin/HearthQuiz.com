@@ -13,7 +13,6 @@ $('#startQuizBtn').click(function() {
   mainWell = document.getElementById('mainWell');
   loadingSpinner = new Spinner().spin(mainWell);
 
-
   //Load Values
   var qClass = $('#classSelect').val();
   var qType = $('#typeSelect').val();
@@ -76,9 +75,6 @@ function initialDataLoad() {
   }
   //Load Card Total
   cardsTotal.text(quizDeck.length);
-  //One Time Animate Footer Text
-  $('#cardCount').removeClass('fadeOut').addClass('fadeIn');
-  $('#instructionText').removeClass('fadeOut').addClass('fadeIn');
   //Load Card Back
   loadCardBack();
   //Stop Spinner
@@ -89,6 +85,8 @@ function initialDataLoad() {
     cached = setInterval(is_cached(quizDeck[2].imageLink), 200);
   }
   //Display Card Quiz
+  $('#cardCount').removeClass('fadeOut').addClass('fadeIn');
+  $('#instructionText').removeClass('fadeOut').addClass('fadeIn');
   mainCardName.addClass('initialAnimation');
   mainImage.addClass('initialAnimation');
   $('#cardQuiz').removeClass('hidden');
@@ -114,6 +112,7 @@ function loadNewCard() {
   var cached = false;
   var once = false;
   var spinning = false;
+  cached = is_cached(currentCard.imageLink);
   while (cached == false) {
     if (once == true) {
       loadingSpinner.spin(mainWell);
