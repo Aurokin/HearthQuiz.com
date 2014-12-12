@@ -65,8 +65,10 @@ function initialDataLoad() {
   }
   //Load Card Total
   cardsTotal.text(quizDeck.length);
-  //Load Card Back
+  //One Time Animate Footer Text
   $('#cardCount').addClass('fadeIn');
+  $('#instructionText').addClass('fadeIn');
+  //Load Card Back
   loadCardBack();
   //Stop Spinner
   loadingSpinner.stop();
