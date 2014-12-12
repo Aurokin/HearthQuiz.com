@@ -1,6 +1,7 @@
 $(document).ready(function() {
   preloadImage('/images/cardBack.png');
   animating = false;
+  spinnerOpts = {top: '60%'};
 });
 
 $('#startQuizBtn').click(function() {
@@ -11,7 +12,7 @@ $('#startQuizBtn').click(function() {
   quizSetup.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', setAnimateToFalse);
   //Load Spinner
   mainWell = document.getElementById('mainWell');
-  loadingSpinner = new Spinner().spin(mainWell);
+  loadingSpinner = new Spinner(spinnerOpts).spin(mainWell);
 
   //Load Values
   var qClass = $('#classSelect').val();
