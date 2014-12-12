@@ -10,16 +10,14 @@ $('#startQuizBtn').click(function() {
   quizSetup.removeClass('fadeIn').addClass('fadeOut');
   quizSetup.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', setAnimateToFalse);
   //Load Spinner
-  site = document.getElementById('site');
-  loadingSpinner = new Spinner().spin(site);
+  mainWell = document.getElementById('mainWell');
+  loadingSpinner = new Spinner().spin(mainWell);
 
 
   //Load Values
   var qClass = $('#classSelect').val();
   var qType = $('#typeSelect').val();
   var qSet = $('#setSelect').val();
-
-  $('#quizSetup').removeClass('initialAnimation');
 
   postData = {qClass : qClass, qType : qType, qSet : qSet};
 
@@ -45,7 +43,7 @@ $('#startQuizBtn').click(function() {
       initialDataLoad();
     }
     else {
-        setTimeout(function() {initialDataLoad();}, 2000);
+      setTimeout(function() {initialDataLoad();}, 1250);
     }
 
   });
@@ -70,8 +68,8 @@ $('#mainImage').click(function() {
 });
 
 function initialDataLoad() {
+  $('#quizSetup').removeClass('initialAnimation');
   $('#quizSetup').hide();
-
   //Preload First 3 Images
   for (i = 0; i < 3; i++) {
     preloadImage(quizDeck[i].imageLink);
@@ -118,7 +116,7 @@ function loadNewCard() {
   var spinning = false;
   while (cached == false) {
     if (once == true) {
-      loadingSpinner.spin(site);
+      loadingSpinner.spin(mainWell);
       spinning = true;
     }
     cached = setInterval(is_cached(currentCard.imageLink), 1000);
