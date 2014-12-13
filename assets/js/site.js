@@ -111,16 +111,12 @@ function loadNewCard() {
   }
   var currentCard = quizDeck.shift();
   var cached = false;
-  var once = false;
   var spinning = false;
   cached = is_cached(currentCard.imageLink);
   while (cached == false) {
-    if (once == true) {
-      loadingSpinner.spin(mainWell);
-      spinning = true;
-    }
+    loadingSpinner.spin(mainWell);
+    spinning = true;
     cached = setInterval(is_cached(currentCard.imageLink), 1000);
-    once = true;
   }
   if (spinning == true) {
     loadingSpinner.stop();
