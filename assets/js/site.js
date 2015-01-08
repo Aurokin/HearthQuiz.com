@@ -5,6 +5,8 @@ $(document).ready(function() {
 });
 
 $('#startQuizBtn').click(function() {
+  //Disable Button
+  $('#startQuizBtn').attr("disabled", true);
   //Animate Fade
   animating = true;
   quizSetup = $('#quizSetup');
@@ -149,5 +151,6 @@ function setAnimateToFalse() {
 function showRegularQuiz() {
   cardsCount.text(0);
   $('#cardQuiz').addClass('hidden');
+  $('#startQuizBtn').attr("disabled", false);
   quizSetup.removeClass('fadeOut').addClass('fadeIn').show();
 }
