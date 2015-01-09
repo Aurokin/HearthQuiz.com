@@ -12,6 +12,10 @@
 module.exports.bootstrap = function(cb) {
   //POST DATA
 
+  var postPort = 80;
+  if (process.env.NODE_ENV == 'development') {
+    postPort = 1337;
+  }
   //Setup Data
   var http = require('http');
   var cards = require('../assets/json/AllSets.json');
@@ -21,11 +25,11 @@ module.exports.bootstrap = function(cb) {
     'Content-Length': Buffer.byteLength(jsonData, 'utf8')
   };
   var options = {
-      host: 'localhost',
-      port: '1337',
-      path: '/insertCards',
-      method: 'POST',
-      headers: headers
+    host: 'localhost',
+    port: postPort,
+    path: '/insertCards',
+    method: 'POST',
+    headers: headers
   };
 
   //Setup Request
@@ -35,7 +39,7 @@ module.exports.bootstrap = function(cb) {
     var responseString = '';
 
     res.on('data', function(data) {
-      console.log('POST completed');
+      console.log('Database Ready!');
     });
   });
   reqs.on('error', function(e) {
@@ -45,7 +49,7 @@ module.exports.bootstrap = function(cb) {
   //POST
   reqs.write(jsonData);
   reqs.end();
-  
+
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
   cb();
