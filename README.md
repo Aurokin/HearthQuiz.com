@@ -9,7 +9,7 @@ HearthQuiz is a nodeJS Web Application running on the Sails MVC Framework.  It p
   - sails-postgresql
  - PostgreSQL
  - Bower
- - curl
+
 
 # Libraries
  - Animate.css
@@ -18,11 +18,6 @@ HearthQuiz is a nodeJS Web Application running on the Sails MVC Framework.  It p
  - Underscore.js
 
 # Installation
- - Install curl
-```
-sudo apt-get update
-sudo apt-get install curl
-```
  - Install PostgreSQL
 ```
 sudo apt-get update
@@ -69,15 +64,7 @@ sudo npm install sails-generate-bower
  - Finish Instalation / Start Application
 ```
 sudo npm install
-sails lift
-```
-
-
-# Filling Database
- - Ensure Sails is lifted (Either open another tab, or use forever)
-```
-cd /assets/json
-curl -X POST -H "Content-Type: application/json" -d @AllSets.json http://localhost:1337/insertCards
+sudo sails lift (--prod)
 ```
 
 # Credits
