@@ -53,7 +53,7 @@ module.exports = {
 		Cards.find().where({
 			playerClass : {'startsWith' : qClass},
 			type : {'startsWith' : qType},
-			set : {'startsWith' : qSet}	
+			set : {'startsWith' : qSet}
 		}).exec(function(err, cards) {
 				res.send(cards);
 		});

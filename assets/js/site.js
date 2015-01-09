@@ -21,11 +21,11 @@ $('#startQuizBtn').click(function() {
   var qType = $('#typeSelect').val();
   var qSet = $('#setSelect').val();
 
-  postData = {qClass : qClass, qType : qType, qSet : qSet};
+  getData = {qClass : qClass, qType : qType, qSet : qSet};
 
-  console.log(postData);
+  console.log(getData);
 
-  io.socket.post('/customQuiz', postData, function (data, jwres) {
+  io.socket.get('/customQuiz', getData, function (data, jwres) {
     console.log(data);
     //Shuffle Quiz
     //Output Is Same Per Quiz Settings If You Shuffle Once
